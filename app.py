@@ -21,7 +21,7 @@ layout="wide"
 
 # ==========================================
 
-model = joblib.load("telecom_churn_model.pkl")
+model = joblib.load("model.pkl")
 
 # ==========================================
 
