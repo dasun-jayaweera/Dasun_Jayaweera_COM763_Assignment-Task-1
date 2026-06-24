@@ -13,6 +13,77 @@ st.set_page_config(
 )
 
 # =====================================================
+# CUSTOM LIGHT THEME
+# =====================================================
+
+st.markdown("""
+<style>
+
+/* Main Background */
+.stApp {
+    background-color: #f4f7fc;
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"] {
+    background-color: #ffffff;
+    border-right: 1px solid #e6e6e6;
+}
+
+/* KPI Cards */
+div[data-testid="metric-container"] {
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Tabs */
+button[data-baseweb="tab"] {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* Buttons */
+.stButton > button {
+    background-color: #0E4C92;
+    color: white;
+    border-radius: 10px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.stButton > button:hover {
+    background-color: #1565C0;
+    color: white;
+}
+
+/* Headers */
+h1 {
+    color: #0E4C92;
+}
+
+h2, h3 {
+    color: #1F2937;
+}
+
+/* Dataframe */
+[data-testid="stDataFrame"] {
+    border-radius: 10px;
+}
+
+/* Info boxes */
+.stAlert {
+    border-radius: 10px;
+}
+
+</style>
+""", unsafe_allow_html=True)
+
+
+# =====================================================
 # LOAD MODEL
 # =====================================================
 
@@ -86,10 +157,10 @@ else:
 
     k1, k2, k3, k4 = st.columns(4)
 
-    k1.metric("Model", "Random Forest")
-    k2.metric("Accuracy", "92.54%")
-    k3.metric("Dataset Size", "667")
-    k4.metric("Features", "19")
+    k1.metric("🤖 Model", "Random Forest")
+    k2.metric("🎯 Accuracy", "92.54%")
+    k3.metric("📊 Dataset", "667")
+    k4.metric("📌 Features", "19")
 
     st.markdown("---")
 
